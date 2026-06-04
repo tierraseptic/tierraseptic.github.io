@@ -1,0 +1,4 @@
+Contact: https://tierraseptic.com/contact.html
+Preferred-Languages: en
+Canonical: https://tierraseptic.com/.well-known/security.txt
+Policy: https://tierraseptic.com/

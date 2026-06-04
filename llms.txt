@@ -1,0 +1,28 @@
+# Tierra Septic — https://tierraseptic.com
+
+> Professional septic system design, permitting, inspections, and soil testing in Florida.
+
+## About
+
+Tierra Septic is an environmental health consulting business founded by Nicole Commisso, CEHP, M.S. Services include septic system design, state permit applications, septic inspections, compliance reviews, system modifications, and soil/site testing (including 10YR Munsell evaluations).
+
+## Primary pages
+
+- Home: https://tierraseptic.com/
+- Services: https://tierraseptic.com/services.html
+- Soil & Site Testing: https://tierraseptic.com/soil-testing.html
+- About: https://tierraseptic.com/about.html
+- Request service (contact form): https://tierraseptic.com/contact.html
+
+## Audience
+
+Homeowners, builders, contractors, developers, and real estate professionals in Florida.
+
+## Contact
+
+Use the request form at https://tierraseptic.com/contact.html for service inquiries.
+
+## Crawling
+
+- Sitemap: https://tierraseptic.com/sitemap.xml
+- Robots: https://tierraseptic.com/robots.txt

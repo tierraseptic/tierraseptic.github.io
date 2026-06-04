@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Request Service | Contact Tierra Septic</title>
+  <meta name="description" content="Request septic design, permitting, inspections, or soil testing. Submit your project details and Tierra Septic will contact you to discuss your needs.">
+  <link rel="canonical" href="https://tierraseptic.com/contact.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Request Service | Tierra Septic">
+  <meta property="og:description" content="Contact Tierra Septic for septic consulting, permitting, inspections, and soil evaluations in Florida.">
+  <meta property="og:url" content="https://tierraseptic.com/contact.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="icon" href="/assets/images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/images/logo.svg">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="sitemap" href="/sitemap.xml" type="application/xml" title="Sitemap">
+  <meta name="theme-color" content="#7ab892">
+  <meta name="author" content="Tierra Septic">
+  <meta property="og:image" content="https://tierraseptic.com/assets/images/logo.svg">
+  <meta property="og:image:alt" content="Tierra Septic logo">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="logo-link" href="/" aria-label="Tierra Septic home">
+        <img src="/assets/images/logo.svg" width="120" height="177" alt="Tierra Septic">
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu"><span></span><span></span><span></span></button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/soil-testing.html">Soil &amp; Site Testing</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li class="nav-cta"><a class="btn btn-primary" href="/contact.html" aria-current="page">Request Service</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb">
+            <li><a href="/">Home</a></li>
+            <li aria-current="page">Request Service</li>
+          </ol>
+        </nav>
+        <h1>Request Service</h1>
+        <p class="lead">Need assistance with a septic project? Submit your information below and we will contact you to discuss your needs.</p>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="container">
+        <div class="form-panel">
+          <h2 id="contact-form-heading" style="margin-top: 0; font-size: 1.35rem;">Client information</h2>
+          <form
+            id="contact-form"
+            action="https://formspree.io/f/xzdqzpqn"
+            method="POST"
+            aria-labelledby="contact-form-heading"
+          >
+            <input type="hidden" name="_subject" value="New service request — Tierra Septic">
+            <input type="hidden" name="_next" value="https://tierraseptic.com/contact.html?submitted=true">
+
+            <div class="form-group">
+              <label for="name">Name <span aria-hidden="true">*</span></label>
+              <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your full name">
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone number <span aria-hidden="true">*</span></label>
+              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-5555">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email <span class="optional">(optional)</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="you@example.com">
+            </div>
+
+            <div class="form-group">
+              <label for="address">Property address <span class="optional">(optional)</span></label>
+              <input type="text" id="address" name="property_address" autocomplete="street-address" placeholder="Street, city, county">
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service requested</label>
+              <select id="service" name="service_requested">
+                <option value="">Select a service…</option>
+                <option value="Septic Design">Septic Design</option>
+                <option value="Permit Application">Permit Application</option>
+                <option value="Inspection">Inspection</option>
+                <option value="Soil Evaluation">Soil Evaluation</option>
+                <option value="Compliance Check">Compliance Check</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Project description <span class="optional">(optional)</span></label>
+              <textarea id="description" name="project_description" placeholder="Briefly describe your project, timeline, or questions"></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-method">Preferred contact method <span class="optional">(optional)</span></label>
+              <select id="contact-method" name="preferred_contact_method">
+                <option value="">No preference</option>
+                <option value="Phone">Phone</option>
+                <option value="Email">Email</option>
+                <option value="Text">Text message</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit request</button>
+            <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="faq">
+      <div class="container">
+        <div class="section-header centered">
+          <p class="eyebrow">FAQ</p>
+          <h2>Frequently asked questions</h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              What areas do you serve?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Tierra Septic provides consulting throughout Florida. Nicole has direct experience with onsite sewage programs in Lee, Collier, Hendry, Broward, and Miami-Dade counties. Contact us with your property location and we will confirm availability.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Do I need soil testing before septic design?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>In most cases, yes. Soil and site evaluations establish whether a property can support an onsite system and which system type is appropriate. We can help coordinate testing early to avoid delays in permitting and construction.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              How long does septic permitting take?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Timelines vary by county, project complexity, and whether soil evaluation and design are complete. Complete permit packages and accurate site data typically reduce review time. We focus on preparing thorough documentation to keep approvals moving.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Can you inspect a septic system for a real estate transaction?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Yes. We perform inspections for real estate due diligence, compliance verification, and troubleshooting. Select <strong>Inspection</strong> on the request form and include your closing timeline in the project description.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              What should I include in my service request?
+              <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/></svg>
+            </button>
+            <div class="faq-answer" hidden>
+              <p>Property address (if available), type of service needed, whether the project is new construction or existing system work, and any known deadlines. The more context you provide, the faster we can route your request.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/images/logo.svg" width="120" height="177" alt="">
+          <p>Submit a service request for septic design, permitting, inspections, or soil testing.</p>
+        </div>
+        <div class="footer-nav">
+          <h3>Pages</h3>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/soil-testing.html">Soil &amp; Site Testing</a></li>
+            <li><a href="/about.html">About</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h3>Questions?</h3>
+          <p>See our <a href="/contact.html#faq">FAQ</a> or submit the form above.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-tagline">Helping projects move forward with reliable septic approvals.</p>
+        <p>&copy; <span id="year"></span> Tierra Septic. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <script src="/js/main.js" defer></script>
+</body>
+</html>

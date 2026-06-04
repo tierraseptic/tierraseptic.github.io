@@ -1,0 +1,18 @@
+{
+  "name": "Tierra Septic",
+  "short_name": "Tierra Septic",
+  "description": "Septic design, permitting, inspections, and soil testing in Florida.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8f7f4",
+  "theme_color": "#7ab892",
+  "lang": "en-US",
+  "icons": [
+    {
+      "src": "/assets/images/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

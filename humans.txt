@@ -1,0 +1,17 @@
+/* TEAM */
+Business: Tierra Septic
+Founder: Nicole Commisso, CEHP, M.S.
+Role: Environmental Health Consultant — septic design, permitting, inspections, soil testing
+Location: Florida, USA
+Contact: https://tierraseptic.com/contact.html
+
+/* THANKS */
+Standards: HTML5, CSS3, WCAG-oriented markup
+Hosting: GitHub Pages
+Fonts: DM Sans, Source Serif 4 (Google Fonts)
+
+/* SITE */
+Last update: 2026-06-04
+Language: English
+Doctype: HTML5
+IDE: VSCode

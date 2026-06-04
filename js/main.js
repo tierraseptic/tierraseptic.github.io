@@ -39,24 +39,56 @@
     });
   });
 
-  var params = new URLSearchParams(window.location.search);
-  if (params.get("submitted") === "true") {
-    var status = document.getElementById("form-status");
-    if (status) {
-      status.textContent =
-        "Thank you. Your request was submitted successfully. We will be in touch soon.";
-      status.className = "form-status success";
-    }
-  }
-
   var form = document.getElementById("contact-form");
   if (form) {
+    var submitBtn = form.querySelector('[type="submit"]');
+    var defaultBtnText = submitBtn ? submitBtn.textContent : "Submit request";
+
     form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
       var status = document.getElementById("form-status");
       if (!status) return;
+
       status.className = "form-status";
-      status.style.display = "none";
       status.textContent = "";
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending…";
+      }
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            return response.json().then(function (data) {
+              throw new Error(data.error || "Something went wrong. Please try again.");
+            });
+          }
+          return response.json();
+        })
+        .then(function () {
+          status.textContent =
+            "Thank you. Your request was submitted successfully. We will be in touch soon.";
+          status.className = "form-status success";
+          form.reset();
+          status.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        })
+        .catch(function (err) {
+          status.textContent =
+            err.message || "Unable to send your request. Please try again or call us directly.";
+          status.className = "form-status error";
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = defaultBtnText;
+          }
+        });
     });
   }
 })();

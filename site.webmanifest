@@ -9,9 +9,9 @@
   "lang": "en-US",
   "icons": [
     {
-      "src": "/assets/images/logo.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "/assets/images/logo-500w.png",
+      "sizes": "500x736",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

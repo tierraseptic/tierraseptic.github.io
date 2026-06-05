@@ -108,6 +108,14 @@
         return;
       }
 
+      if (window.TierraAnalytics) {
+        window.TierraAnalytics.track("form_submit", {
+          event_category: "form",
+          event_label: "contact_form_attempt",
+          page_path: location.pathname,
+        });
+      }
+
       status.className = "form-status";
       status.textContent = "";
 
@@ -135,11 +143,27 @@
           status.className = "form-status success";
           form.reset();
           status.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          if (window.TierraAnalytics) {
+            var serviceField = form.querySelector('[name="service_requested"]');
+            window.TierraAnalytics.track("generate_lead", {
+              event_category: "form",
+              method: "contact_form",
+              service_requested: serviceField ? serviceField.value || "unspecified" : "unspecified",
+              page_path: location.pathname,
+            });
+          }
         })
         .catch(function (err) {
           status.textContent =
             err.message || "Unable to send your request. Please try again or call us directly.";
           status.className = "form-status error";
+          if (window.TierraAnalytics) {
+            window.TierraAnalytics.track("form_error", {
+              event_category: "form",
+              event_label: err.message || "unknown_error",
+              page_path: location.pathname,
+            });
+          }
         })
         .finally(function () {
           if (submitBtn) {

@@ -126,7 +126,18 @@
 
             <div class="form-group">
               <label for="phone">Phone number <span aria-hidden="true">*</span></label>
-              <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="(555) 555-5555">
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                required
+                autocomplete="tel"
+                inputmode="tel"
+                maxlength="14"
+                placeholder="(555) 555-5555"
+                aria-describedby="phone-hint"
+              >
+              <span id="phone-hint" class="hint">10-digit US number</span>
             </div>
 
             <div class="form-group">

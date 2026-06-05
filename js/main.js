@@ -39,6 +39,49 @@
     });
   });
 
+  function formatPhoneNumber(value) {
+    var digits = value.replace(/\D/g, "").slice(0, 10);
+    if (digits.length === 0) return "";
+    if (digits.length < 4) return "(" + digits;
+    if (digits.length < 7) {
+      return "(" + digits.slice(0, 3) + ") " + digits.slice(3);
+    }
+    return "(" + digits.slice(0, 3) + ") " + digits.slice(3, 6) + "-" + digits.slice(6);
+  }
+
+  function setPhoneCursor(input, digitsBeforeCursor) {
+    var pos = 0;
+    var count = 0;
+    for (var i = 0; i < input.value.length; i++) {
+      if (/\d/.test(input.value.charAt(i))) {
+        count++;
+      }
+      pos = i + 1;
+      if (count >= digitsBeforeCursor) break;
+    }
+    input.setSelectionRange(pos, pos);
+  }
+
+  var phoneInput = document.getElementById("phone");
+  if (phoneInput) {
+    phoneInput.addEventListener("input", function () {
+      var end = phoneInput.selectionEnd || 0;
+      var digitsBefore = phoneInput.value.slice(0, end).replace(/\D/g, "").length;
+      phoneInput.value = formatPhoneNumber(phoneInput.value);
+      setPhoneCursor(phoneInput, digitsBefore);
+      phoneInput.setCustomValidity("");
+    });
+
+    phoneInput.addEventListener("blur", function () {
+      var digits = phoneInput.value.replace(/\D/g, "");
+      if (digits.length > 0 && digits.length < 10) {
+        phoneInput.setCustomValidity("Please enter a 10-digit phone number.");
+      } else {
+        phoneInput.setCustomValidity("");
+      }
+    });
+  }
+
   var form = document.getElementById("contact-form");
   if (form) {
     var submitBtn = form.querySelector('[type="submit"]');
@@ -49,6 +92,21 @@
 
       var status = document.getElementById("form-status");
       if (!status) return;
+
+      if (phoneInput) {
+        var phoneDigits = phoneInput.value.replace(/\D/g, "");
+        if (phoneDigits.length < 10) {
+          phoneInput.setCustomValidity("Please enter a 10-digit phone number.");
+          phoneInput.reportValidity();
+          return;
+        }
+        phoneInput.setCustomValidity("");
+      }
+
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
 
       status.className = "form-status";
       status.textContent = "";

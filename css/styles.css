@@ -563,6 +563,11 @@ h3 {
   font-size: 0.8125rem;
 }
 
+.form-group .hint {
+  display: block;
+  margin-top: 0.35rem;
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
